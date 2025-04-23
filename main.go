@@ -27,6 +27,8 @@ func HandleMockFile(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("set linger success")
 	}
 
+	conn.SetWriteBuffer(1024)
+
 	// write content length
 	w.Header().Set("Content-Length", strconv.Itoa(len(content)))
 
