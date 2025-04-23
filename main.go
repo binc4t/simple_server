@@ -41,8 +41,8 @@ func GetConnFromContext(ctx context.Context) net.Conn {
 	return ctx.Value("conn").(net.Conn)
 }
 
-func GetTCPConnFromContext(ctx context.Context) *TCPConn {
-	return ctx.Value("conn").(*TCPConn)
+func GetTCPConnFromContext(ctx context.Context) *net.TCPConn {
+	return ctx.Value("conn").(*net.TCPConn)
 }
 
 func main() {
